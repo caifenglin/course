@@ -1,0 +1,15 @@
+common:
+  tencent:
+    course:
+      # 课程地址 如:https://ke.qq.com/course/300927#term_id=100376100
+      course_url: https://ke.qq.com/course/353801#term_id=100420611
+      # sqlite数据库目录
+      sqlite_dir: F:\course\腾讯课堂原始SQLite\txdownload
+      # sqlite转换后的视频目录
+      video_dir: F:\course\腾讯课堂转换TS
+      # 转换后的视频后缀
+      video_extension: .ts
+      # 最终转换后的视频目录
+      convert_dir: F:\course\转换后的路径
+      # 转换的时候时拷贝视频还是移动视频，建议拷贝。移动虽然快但容易造成转换后的视频丢失，如果转换错误，则会存在丢失原视频
+      convert_copy: true

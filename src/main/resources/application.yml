@@ -1,0 +1,38 @@
+spring:
+  application:
+    # 应用名,一般和代码工程名一致
+    name: course
+  profiles:
+    active: prod
+  # 检查终端是否支持ANSI，是的话就采用彩色输出
+  output:
+    ansi:
+      enabled: detect
+
+# 线程池配置
+threadpool:
+  # 主线程池配置
+  main:
+    # 核心线程池数
+    # corePoolSize: 8
+    # 最大线程
+    # maxPoolSize: 20
+    # 队列容量
+    queueCapacity: 1000
+    # 空闲线程存活时间
+    keepAliveSeconds: 60
+    threadNamePrefix: MainTask-Thread-
+    waitForTasksToCompleteOnShutdown: true
+
+  # 副线程池配置
+  sub:
+    # 核心线程池数
+    # corePoolSize: 8
+    # 最大线程
+    # maxPoolSize: 20
+    # 队列容量
+    queueCapacity: 3000
+    # 空闲线程存活时间
+    keepAliveSeconds: 60
+    threadNamePrefix: SubTask-Thread-
+    waitForTasksToCompleteOnShutdown: true
